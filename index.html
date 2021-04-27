@@ -1,40 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel Music</title>
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" integrity="sha384-G9DpmGxRIF6tpgbrkZVcZDeIomEU22LgTguPAI739bbKytjPE/kHTK5YxjJAAEXC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/grids-responsive-min.css">
-</head>
-<body>
-    <div class="pure-g">
-        <header class="pure-u-1">
-            <h1>Travel Tunes</h1>
-        </header>
-        <main>
-    <div id="search-area" class="pure-u-1"><!--Form area for search bar-->
-        <form>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/purecss@2.0.5/build/pure-min.css"
+      integrity="sha384-G9DpmGxRIF6tpgbrkZVcZDeIomEU22LgTguPAI739bbKytjPE/kHTK5YxjJAAEXC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/purecss@2.0.5/build/grids-responsive-min.css"
+    />
+  </head>
+  <body>
+    <header class="pure-u-1">
+      <h1>Travel Tunes</h1>
+    </header>
+
+    <main>
+      <div class="pure-g">
+        <div id="search-area" class="pure-u-1">
+          <!--Form area for search bar-->
+          <form>
             <label for="search">Destination:</label>
             <input type="text" id="search" name="search" />
             <input type="submit" value="Search" />
-        </form>
-    </div>
-    <div id="content-area" class="pure-g"><!--content for results of search and music result-->
-    <div id="weather-box" class="pure-u-md-3-4">
-        <h2>Weather Info Here</h2>
+          </form>
+        </div>
+        <div id="content-area" class="pure-g">
+          <!--content for results of search and music result-->
+          <div id="weather-box" class="pure-u-md-3-4">
+            <h2>Weather Info Here</h2>
+          </div>
+          <div id="playlist-box" class="pure-u-md-1-4">
+            <h2>Playlist</h2>
+          </div>
+        </div>
+        <!--closing content area-->
+      </div>
+    </main>
 
-    </div>
-    <div id="playlist-box" class="pure-u-md-1-4">
-        <h2>Playlist</h2>
-
-    </div>
-    </div><!--closing content area-->
-</main>
     <footer>
-        <p>Footer content here</p>
+      <p>Footer content here</p>
     </footer>
-    
-</body>
+  </body>
 </html>
