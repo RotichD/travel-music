@@ -28,6 +28,21 @@ const APIController = (function() {
         
     }
 
+    const _getGenres = async (token) => { // gets genres, receive token parameter, returns promise, convert to json, store in data variable, return category items
+
+        const result = await fetch(`https://api.spotify.com/v1/browse/categories?locale=sv_US`, {
+            method: 'GET',
+            headers: { 'Authorization' : 'Bearer ' + token}
+        });
+
+        const data = await result.json();
+        return data.categories.items;
+    }
+
+    const _getPlaylistByGenre = async (token, genreId) => {
+
+        const limit = 10; // amount of playlists we want to receive
+    }
     
     
 })();
