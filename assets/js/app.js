@@ -1,3 +1,9 @@
+// get a list of categories - https://api.spotify.com/v1/browse/categories 
+// get a list of categories' playlists - https://api.spotify.com/v1/browse/categories/{category_id}/playlists
+// get a playlist's items (tracks) - https://api.spotify.com/v1/playlists/{playlist_id}/tracks
+// get a track - https://api.spotify.com/v1/tracks/{id} 
+
+
 const APIController = (function() {
 
     // Supplied by Spotify Developer Dashboard
@@ -12,14 +18,14 @@ const APIController = (function() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
-                'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret) //base-64 encoded string representation 
+                'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret) //base-64 encoded string representation of client ID/Secret
             },
             body: 'grant_type=client_credentials'
         });
 
         const data = await result.json();
         return data.access_token;
-        console.log(data);
+        
     }
 
     
