@@ -42,6 +42,14 @@ const APIController = (function() {
     const _getPlaylistByGenre = async (token, genreId) => {
 
         const limit = 10; // amount of playlists we want to receive
+
+        const result = await fetch(`https://api.spotify.com/v1/browse/categories/${genreId}/playlists?limit=${limit}`, {
+            method: 'GET',
+            headers: { 'Authorization' : 'Bearer' + token}
+        });
+
+        const data = await result.json();
+        return data.playlists.items;
     }
     
     
