@@ -51,6 +51,18 @@ const APIController = (function() {
         const data = await result.json();
         return data.playlists.items;
     }
+
+    return {
+        getToken() {
+            return _getToken();
+        },
+        getGenres(token) {
+            return _getGenres(token);
+        },
+        getPlaylistByGenre(token, genreId) {
+            return _getPlaylistByGenre(token, genreId);
+        }
+    }
     
     
 })();
