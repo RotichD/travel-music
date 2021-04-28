@@ -7,16 +7,23 @@ const APIController = (function() {
     // private method, returns promise
     const _getToken = async () => {
         
-        const result = await fetch('', {
+        // call spotify token endpoint, needs to be POST request
+        const result = await fetch('https://accounts.spotify.com/api/token', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
-                'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret)
+                'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret) //base-64 encoded string representation 
             },
             body: 'grant_type=client_credentials'
         });
 
         const data = await result.json();
         return data.access_token;
+        console.log(data);
     }
+
+    
+    
 })();
+
+
