@@ -33,22 +33,16 @@ var getRandomInt = function(size) {
 
 // inserts embedded code into the dom
 var insertPlaylist = function(weatherCondition) {
-    weatherCondition.preventDefault();
+    
 
     // clear old content first
-    playlistContainerEl.textContent = "";
-    var spotifyPlayer = document.createElement('span');
-    spotifyPlayer.innerHTML = '<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
+    
+    var spotifyPlayer = document.getElementById("spotify-player");
+    url_string = "https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn"
         
-
-    spotifyPlayer.appendChild(playlistContainerEl);
+    spotifyPlayer.src = url_string;
 
 };
-//  width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"
-
-
-// try with span
-
 
 
 
