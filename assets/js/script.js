@@ -13,6 +13,29 @@ var historyCardEl = document.querySelector("#history")
 var trashEl = document.querySelector("#trash")
 var searchHistoryArray = []
 
+var formSubmitHandler = function (event) {
+    event.preventDefault();
+    // get city name 
+    var cityname = cityNameInputEl.value.trim();
 
+    // set city in local storage and generate history buttons
+    if (cityname) {
+        searchHistoryArray.push(cityname);
+        localStorage.setItem("weatherSearch", JSON.stringify(searchHistoryArray));
+        var searchHistoryEl = document.createElement('button');
+        searchHistoryEl.className = "btn";
+        searchHistoryEl.setAttribute("data-city", cityname)
+        searchHistoryEl.innerHTML = cityname;
+        historyButtonsEl.appendChild(searchHistoryEl);
+        historyCardEl.removeAttribute("style")
+        getWeatherInfo(cityname);
+        cityNameInputEl.value = "";
+    }
+    else {
+        alert("Please Enter a City Name");
+    }
 
+}
+
+// get weather info from OpenWeather
 
