@@ -38,4 +38,9 @@ var formSubmitHandler = function (event) {
 }
 
 // get weather info from OpenWeather
-
+var getWeatherInfo = function (cityname) {
+    var apiCityUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityname + "&units=imperial&appid=f97301447cbd41068af8623a398ba1fb";
+    fetch(
+        // works by getting latitude and longitude for city
+        apiCityUrl
+    )
