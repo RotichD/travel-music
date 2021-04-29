@@ -1,7 +1,8 @@
 :root {
     --main-color: #191414;
     --text-color: #C3D2D5;
-
+    --content-background: #cfcecd;
+    --border-color: #878582;
 
 }
 
@@ -16,27 +17,29 @@
     display: flex;
     border: grey;
     text-align: center;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    margin-left: 25px;
 
 }
 
 
 h1 {
     text-align: center;
-    border-bottom: darkgray;
+    border-bottom: var(--border-color);
     border-style: groove;
     padding: 20px 0 20px 0;
 }
 
 h2 {
-    display: flex;
-    flex-direction: column-reverse;
     text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;    
+    border:var(--border-color);
+    border-style: solid;
+    
 }
-
 label {
     font-weight: bold;
     font-size: 15px;
@@ -45,7 +48,7 @@ label {
 
 
 #search {
-    background-color: rgba(211, 211, 211, 0.534);
+    background-color: rgba(211, 211, 211, 0.445);
     color: var(--main-color);
     border-radius: 4rem;
     margin-right: 5px;
@@ -54,33 +57,33 @@ label {
 }
 
 button {
-    background-color: green;
+    background-color: rgb(163, 163, 163);
     border-radius: 4rem;
 }
 
 .button:hover {
     background-color: white;
     color: black;
-
 }
 
 #content-area {
-    display: flex;
-    border: red;
-    border-style: solid;
-    padding-left: 15px;
-    margin-top: 20px;
+    display: flex;    
+    width:100%;
+    height:100px;
 }
 
+#content-area div {
+    flex-basis: 100%;
+}
+
+
 #weather-box {
-    display: flex;
+    background-color: rgba(169, 169, 169, 0.377);
     
 }
 
 #playlist-box {
-    display: flex;
-    border-left: red;
-    border-style: solid;
+    background-color: rgba(169, 169, 169, 0.377);
 }
 
 footer {
@@ -88,5 +91,12 @@ footer {
     bottom: 0;
     width: 100%;
     height: 2.5rem;
+    background-color: rgba(169, 169, 169, 0.377);
+}
+
+footer p {
+    background-color: rgba(169, 169, 169, 0.377);
+    color: #fff;
+    text-align:justify
 }
 
