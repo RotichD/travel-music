@@ -44,3 +44,12 @@ var getWeatherInfo = function (cityname) {
         // works by getting latitude and longitude for city
         apiCityUrl
     )
+
+    .then(function (cityResponse) {
+        return cityResponse.json();
+    })
+    .then(function (cityResponse) {
+        // create variables to keep lat and long of city
+        console.log(cityResponse)
+        var latitude = cityResponse.coord.lat;
+        var longitude = cityResponse.coord.lon; 
