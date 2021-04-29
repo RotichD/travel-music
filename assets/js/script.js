@@ -105,3 +105,25 @@ var displayWeather = function (weather) {
     humidity.id = "humidity";
     humidity.innerHTML = "<strong>Humidity:</strong> " + weather.current.humidity + "%";
     currentWeatherEl.appendChild(humidity);
+
+    // Create Wind Speed element
+    var windSpeed = document.createElement('p');
+    windSpeed.id = "wind-speed";
+    windSpeed.innerHTML = "<strong>Wind Speed:</strong> " + weather.current.wind_speed.toFixed(1) + " MPH";
+    currentWeatherEl.appendChild(windSpeed);
+
+    // Create uv-index element
+    var uvIndex = document.createElement('p');
+    var uvIndexValue = weather.current.uvi.toFixed(1);
+    uvIndex.id = "uv-index";
+    if (uvIndexValue >= 0) {
+        uvIndex.className = "uv-index-green"
+    }
+    if (uvIndexValue >= 3) {
+        uvIndex.className = "uv-index-yellow"
+    }
+    if (uvIndexValue >= 8) {
+        uvIndex.className = "uv-index-red"
+    }
+    uvIndex.innerHTML = "<strong>UV Index:</strong> <span>" + uvIndexValue + "</span>";
+    currentWeatherEl.appendChild(uvIndex);
