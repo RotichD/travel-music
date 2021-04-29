@@ -13,7 +13,8 @@
 }
 
 #search-area {
-    
+    display: flex;
+    border: grey;
 
 }
 
@@ -22,12 +23,16 @@ h1 {
     text-align: justify;
 }
 
+h2 {
+    text-align: justify;
+    border: red;
+}
+
 label {
     font-weight: bold;
     font-size: 15px;
     margin-top: 10px;
 }
-
 
 
 #search {
@@ -42,5 +47,18 @@ label {
 button {
     background-color: green;
     border-radius: 4rem;
+}
+
+#content-area {
+    display: flex;
+    
+}
+
+#weather-box {
+    display: flex;
+}
+
+#playlist-box {
+    display: flex;
 }
 
