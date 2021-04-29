@@ -60,3 +60,7 @@ var getWeatherInfo = function (cityname) {
             var weatherIcon = cityResponse.weather[0].icon;
             var weatherDescription = cityResponse.weather[0].description;
             var weatherIconLink = "<img src='http://openweathermap.org/img/wn/" + weatherIcon + "@2x.png' alt='" + weatherDescription + "' title='" + weatherDescription + "'  />"
+
+            // blank weather element for new data
+            currentWeatherEl.textContent = "";
+            fiveDayEl.textContent = "";
