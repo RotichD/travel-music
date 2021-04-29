@@ -53,7 +53,7 @@ var getRandomInt = function (size) {
 
 // Provides a random playlist src url by accessing array that is passed to the function
 var randomPlaylist = function (conditionArray) {
-  getRandomInt(warmSongs);
+  getRandomInt(conditionArray);
 
   spotifyUrlHalf = "https://open.spotify.com/embed/playlist/";
 
