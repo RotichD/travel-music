@@ -52,12 +52,12 @@ var getRandomInt = function (size) {
 };
 
 // Provides a random playlist src url by accessing array that is passed to the function
-var randomPlaylist = function (conditionArray) {
-  getRandomInt(conditionArray);
+var randomPlaylist = function (weatherArray) {
+  getRandomInt(weatherArray);
 
   spotifyUrlHalf = "https://open.spotify.com/embed/playlist/";
 
-  randomPlaylistUrl = spotifyUrlHalf + warmSongs[playlistNumber];
+  randomPlaylistUrl = spotifyUrlHalf + weatherArray[playlistNumber];
 
   console.log(randomPlaylistUrl);
   return randomPlaylistUrl;
