@@ -13,12 +13,13 @@ var historyCardEl = document.querySelector("#history")
 var trashEl = document.querySelector("#trash")
 var searchHistoryArray = []
 
+
 var formSubmitHandler = function (event) {
     event.preventDefault();
-    // get city name 
+    // get city name from input element
     var cityname = cityNameInputEl.value.trim();
 
-    // set city in local storage and generate history buttons
+    // set city name in local storage and generate history bttns
     if (cityname) {
         searchHistoryArray.push(cityname);
         localStorage.setItem("weatherSearch", JSON.stringify(searchHistoryArray));
@@ -32,7 +33,7 @@ var formSubmitHandler = function (event) {
         cityNameInputEl.value = "";
     }
     else {
-        alert("Please Enter a City Name");
+        alert("Please Enter City Name");
     }
 
 }
@@ -41,15 +42,21 @@ var formSubmitHandler = function (event) {
 var getWeatherInfo = function (cityname) {
     var apiCityUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityname + "&units=imperial&appid=f97301447cbd41068af8623a398ba1fb";
     fetch(
-        // works by getting latitude and longitude for city
+        // make a fetch request using city name to get latitude and longitude for particular city
         apiCityUrl
     )
+        .then(function (cityResponse) {
+            return cityResponse.json();
+        })
+        .then(function (cityResponse) {
+            // create variables to keep the lat and long of city
+            console.log(cityResponse)
+            var latitude = cityResponse.coord.lat;
+            var longitude = cityResponse.coord.lon;
 
-    .then(function (cityResponse) {
-        return cityResponse.json();
-    })
-    .then(function (cityResponse) {
-        // create variables to keep lat and long of city
-        console.log(cityResponse)
-        var latitude = cityResponse.coord.lat;
-        var longitude = cityResponse.coord.lon; 
+            // create var for city name, date and icon info for use in weather heading
+            var city = cityResponse.name;
+            var date = (today.getMonth() + 1) + '/' + today.getDate() + '/' + today.getFullYear();
+            var weatherIcon = cityResponse.weather[0].icon;
+            var weatherDescription = cityResponse.weather[0].description;
+            var weatherIconLink = "<img src='http://openweathermap.org/img/wn/" + weatherIcon + "@2x.png' alt='" + weatherDescription + "' title='" + weatherDescription + "'  />"
