@@ -181,3 +181,9 @@ var clearHistory = function (event) {
     localStorage.removeItem("weatherSearch");
     historyCardEl.setAttribute("style", "display: none");
 }
+
+cityFormEl.addEventListener("submit", formSubmitHandler);
+historyButtonsEl.addEventListener("click", buttonClickHandler);
+trashEl.addEventListener("click", clearHistory);
+
+loadHistory();
