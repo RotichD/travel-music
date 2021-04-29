@@ -15,17 +15,26 @@
 #search-area {
     display: flex;
     border: grey;
+    text-align: center;
 
 }
 
 
 h1 {
-    text-align: justify;
+    text-align: center;
+    border-bottom: darkgray;
+    border-style: groove;
+    padding: 20px 0 20px 0;
 }
 
 h2 {
-    text-align: justify;
-    border: red;
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 label {
@@ -49,16 +58,35 @@ button {
     border-radius: 4rem;
 }
 
+.button:hover {
+    background-color: white;
+    color: black;
+
+}
+
 #content-area {
     display: flex;
-    
+    border: red;
+    border-style: solid;
+    padding-left: 15px;
+    margin-top: 20px;
 }
 
 #weather-box {
     display: flex;
+    
 }
 
 #playlist-box {
     display: flex;
+    border-left: red;
+    border-style: solid;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
 }
 
