@@ -64,3 +64,14 @@ var getWeatherInfo = function (cityname) {
             // blank weather element for new data
             currentWeatherEl.textContent = "";
             fiveDayEl.textContent = "";
+
+            // update <h2> element to show city, date and icon
+            weatherStatusEl.innerHTML = city + " (" + date + ") " + weatherIconLink;
+
+            // remove 'hidden' to show current weather card
+            currentWeatherCardEl.classList.remove("hidden");
+            fiveDayCardEl.classList.remove("hidden");
+
+            // return a fetch request to the OpenWeather using lat and long from previous fetch
+            return fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + latitude + '&lon=' + longitude + '&exclude=alerts,minutely,hourly&units=imperial&appid=f97301447cbd41068af8623a398ba1fb');
+        })
