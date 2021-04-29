@@ -86,3 +86,22 @@ var getWeatherInfo = function (cityname) {
 
         });
 };
+
+// display the weather on page
+var displayWeather = function (weather) {
+    // check if api returned any weather data
+    if (weather.length === 0) {
+        weatherContainerEl.textContent = "No weather data found.";
+        return;
+    }
+    // create temp element
+    var temperature = document.createElement('p');
+    temperature.id = "temperature";
+    temperature.innerHTML = "<strong>Temperature:</strong> " + weather.current.temp.toFixed(1) + "°F";
+    currentWeatherEl.appendChild(temperature);
+
+    // create humidity element
+    var humidity = document.createElement('p');
+    humidity.id = "humidity";
+    humidity.innerHTML = "<strong>Humidity:</strong> " + weather.current.humidity + "%";
+    currentWeatherEl.appendChild(humidity);
