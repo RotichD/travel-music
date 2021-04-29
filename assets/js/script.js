@@ -175,3 +175,9 @@ var buttonClickHandler = function (event) {
         getWeatherInfo(cityname);
     }
 }
+
+// clear history
+var clearHistory = function (event) {
+    localStorage.removeItem("weatherSearch");
+    historyCardEl.setAttribute("style", "display: none");
+}
