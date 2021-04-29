@@ -106,13 +106,13 @@ var displayWeather = function (weather) {
     humidity.innerHTML = "<strong>Humidity:</strong> " + weather.current.humidity + "%";
     currentWeatherEl.appendChild(humidity);
 
-    // Create Wind Speed element
+    // create wind speed element
     var windSpeed = document.createElement('p');
     windSpeed.id = "wind-speed";
     windSpeed.innerHTML = "<strong>Wind Speed:</strong> " + weather.current.wind_speed.toFixed(1) + " MPH";
     currentWeatherEl.appendChild(windSpeed);
 
-    // Create uv-index element
+    // create uv-index element
     var uvIndex = document.createElement('p');
     var uvIndexValue = weather.current.uvi.toFixed(1);
     uvIndex.id = "uv-index";
@@ -127,3 +127,25 @@ var displayWeather = function (weather) {
     }
     uvIndex.innerHTML = "<strong>UV Index:</strong> <span>" + uvIndexValue + "</span>";
     currentWeatherEl.appendChild(uvIndex);
+
+    // get extended forecast data
+    var forecastArray = weather.daily;
+
+    // create day cards for extended forecast
+    for (let i = 0; i < forecastArray.length - 3; i++) {
+        var date = (today.getMonth() + 1) + '/' + (today.getDate() + i + 1) + '/' + today.getFullYear();
+        var weatherIcon = forecastArray[i].weather[0].icon;
+        var weatherDescription = forecastArray[i].weather[0].description;
+        var weatherIconLink = "<img src='http://openweathermap.org/img/wn/" + weatherIcon + "@2x.png' alt='" + weatherDescription + "' title='" + weatherDescription + "'  />"
+        var dayEl = document.createElement("div");
+        dayEl.className = "day";
+        dayEl.innerHTML = "<p><strong>" + date + "</strong></p>" +
+            "<p>" + weatherIconLink + "</p>" +
+            "<p><strong>Temp:</strong> " + forecastArray[i].temp.day.toFixed(1) + "°F</p>" +
+            "<p><strong>Humidity:</strong> " + forecastArray[i].humidity + "%</p>"
+
+        fiveDayEl.appendChild(dayEl);
+
+    }
+
+}
