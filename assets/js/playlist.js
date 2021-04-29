@@ -43,6 +43,7 @@ var insertPlaylist = function (weatherCondition) {
   var spotifyPlayer = document.getElementById("spotify-player");
   url_string = randomPlaylist(weatherCondition);
 
+  spotifyPlayer.hidden = false;
   spotifyPlayer.src = url_string;
 };
 
