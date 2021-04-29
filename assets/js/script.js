@@ -75,3 +75,14 @@ var getWeatherInfo = function (cityname) {
             // return a fetch request to the OpenWeather using lat and long from previous fetch
             return fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + latitude + '&lon=' + longitude + '&exclude=alerts,minutely,hourly&units=imperial&appid=f97301447cbd41068af8623a398ba1fb');
         })
+        .then(function (response) {
+            // return response in json format
+            return response.json();
+        })
+        .then(function (response) {
+            console.log(response);
+            // send response data to displayWeather function for final display 
+            displayWeather(response);
+
+        });
+};
