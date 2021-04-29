@@ -1,4 +1,5 @@
 var playlistNumber = 0;
+var playlistContainerEl = document.querySelector("#playlist-box");
 
 // Returns a random playlist and embeds the player in HTML
 
@@ -29,6 +30,25 @@ var getRandomInt = function(size) {
     playlistNumber = Math.floor(Math.random() * size);
 
 ;}
+
+// inserts embedded code into the dom
+var insertPlaylist = function(weatherCondition) {
+    weatherCondition.preventDefault();
+
+    // clear old content first
+    playlistContainerEl.textContent = "";
+    var spotifyPlayer = document.createElement('span');
+    spotifyPlayer.innerHTML = '<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
+        
+
+    spotifyPlayer.appendChild(playlistContainerEl);
+
+};
+//  width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"
+
+
+// try with span
+
 
 
 
