@@ -167,3 +167,11 @@ var loadHistory = function () {
 
     }
 }
+
+// search weather using search history buttons
+var buttonClickHandler = function (event) {
+    var cityname = event.target.getAttribute("data-city");
+    if (cityname) {
+        getWeatherInfo(cityname);
+    }
+}
