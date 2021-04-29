@@ -1,0 +1,46 @@
+:root {
+    --main-color: #191414;
+    --text-color: #C3D2D5;
+
+
+}
+
+
+
+* {
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+
+#search-area {
+    
+
+}
+
+
+h1 {
+    text-align: justify;
+}
+
+label {
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+
+
+#search {
+    background-color: rgba(211, 211, 211, 0.534);
+    color: var(--main-color);
+    border-radius: 4rem;
+    margin-right: 5px;
+    margin-left: 5px;
+    
+}
+
+button {
+    background-color: green;
+    border-radius: 4rem;
+}
+
