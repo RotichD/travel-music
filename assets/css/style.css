@@ -67,9 +67,7 @@ button {
 }
 
 #content-area {
-    display: flex;    
-    width:100%;
-    height:100px;
+    
 }
 
 #content-area div {
@@ -84,6 +82,16 @@ button {
 
 #playlist-box {
     background-color: rgba(169, 169, 169, 0.377);
+}
+
+.embedded-player-container iframe{
+    display: block;
+    margin:auto;
+}
+
+.playlist-description p {
+    text-align: justify;
+    margin: 5%;
 }
 
 footer {
