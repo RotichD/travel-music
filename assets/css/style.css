@@ -97,6 +97,10 @@ footer {
 footer p {
     background-color: rgba(169, 169, 169, 0.377);
     color: #fff;
-    text-align:justify
+    text-align: center;
+}
+
+footer h3 {
+    text-align: center;
 }
 
