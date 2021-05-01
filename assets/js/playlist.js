@@ -73,9 +73,14 @@ var insertPlaylist = function (weatherCondition) {
 };
 
 
-// Create a function that decides what array to pass to the playlist function
 
+// decides what array to use based on weather api
+const weatherToMusic = function() {
+  
+  var currentWeather = "";
 
+  
+}
 
 
 
