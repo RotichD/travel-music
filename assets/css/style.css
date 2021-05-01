@@ -95,6 +95,12 @@ button:hover {
     background-color: rgba(169, 169, 169, 0.377);
 }
 
+.l-box {
+    padding-left: 2em;
+    padding-bottom: 2em;
+}
+
+
 .embedded-player-container iframe{
     display: block;
     margin:auto;
