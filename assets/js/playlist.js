@@ -1,7 +1,12 @@
 // Global Variables:
 var playlistNumber = 0;
 var playlistContainerEl = document.querySelector("#playlist-box");
-var apikey = "b7a61f8039f332afcbf81bb592c9152a";
+var currentCity = "San Francisco";
+var apiKey = "f97301447cbd41068af8623a398ba1fb";
+var forecastUrl = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&units=imperial&appid=${apiKey}`;
+var weatherArrayCode = "";
+var searchButton = document.getElementById("search-button");
+
 
 // Arrays to store playlist codes by related Weather Condition
 // if clear or temp > 70 then random related playlists
@@ -76,12 +81,15 @@ var insertPlaylist = function (weatherCondition) {
 
 
 // decides what array to use based on weather api
-const weatherToMusic = function() {
-  
-  var currentWeather = "";
 
-  
-}
+
+fetch(forecastUrl).then(function(response) {
+  response.json().then(function(data) {
+    console.log(data);
+
+  });
+});
+
 
 
 
