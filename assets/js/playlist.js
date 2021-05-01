@@ -1,6 +1,7 @@
 // Global Variables:
 var playlistNumber = 0;
 var playlistContainerEl = document.querySelector("#playlist-box");
+var apikey = "b7a61f8039f332afcbf81bb592c9152a";
 
 // Arrays to store playlist codes by related Weather Condition
 // if clear or temp > 70 then random related playlists
