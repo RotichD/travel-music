@@ -182,8 +182,8 @@ var clearHistory = function (event) {
     historyCardEl.setAttribute("style", "display: none");
 }
 
-cityFormEl.addEventListener("submit", formSubmitHandler);
-historyButtonsEl.addEventListener("click", buttonClickHandler);
-trashEl.addEventListener("click", clearHistory);
+cityFormEl.addEventListener("submit", formSubmitHandler());
+historyButtonsEl.addEventListener("click", buttonClickHandler());
+trashEl.addEventListener("click", clearHistory());
 
 loadHistory();
