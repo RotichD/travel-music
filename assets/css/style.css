@@ -95,11 +95,31 @@ button:hover {
 }
 
 .l-box {
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-bottom: 2em;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 10%;
 }
 
+.basic-info {
+    font-size: 50px;
+}
+
+.basic-info h3 {
+    font-size: 30px;
+}
+
+.basic-info p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.weather-info {
+    text-align: center;
+}
+
+.weather-info h4 {
+    font-size: 30px;
+}
 
 .embedded-player-container iframe{
     display: block;
