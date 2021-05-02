@@ -115,8 +115,7 @@ var displayWeatherAndMusic = function() {
           if (musicTemp > 65) {
             if (musicTemp > 77) {
               insertPlaylist(hotSongs);
-            }
-            insertPlaylist(warmSongs);
+            } else insertPlaylist(warmSongs);
           } else {
             insertPlaylist(chillSongs);
           }
@@ -176,6 +175,11 @@ searchButton.addEventListener('click', function(event) {
   var searchInput = document.getElementById("search-input");
   currentCity = searchInput.value;
   console.log(currentCity);
+  forecastUrl = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&units=imperial&appid=${apiKey}`;
+ 
+  displayWeatherAndMusic();
+
+
 })
 
 
