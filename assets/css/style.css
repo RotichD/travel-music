@@ -60,7 +60,7 @@ label {
 }
 
 
-#search {
+#search-input {
     background-color: rgba(238, 238, 238, 0.24);
     color: var(--main-color);
     border-radius: 10px;

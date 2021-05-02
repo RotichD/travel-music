@@ -1,7 +1,7 @@
 // Global Variables:
 var playlistNumber = 0;
 var playlistContainerEl = document.querySelector("#playlist-box");
-var currentCity = "El Sobrante";
+var currentCity = "";
 var apiKey = "f97301447cbd41068af8623a398ba1fb";
 var forecastUrl = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&units=imperial&appid=${apiKey}`;
 var weatherArrayCode = "";
@@ -11,6 +11,7 @@ var cityName = document.getElementById("current-city");
 var currentTemp = document.getElementById("current-temp");
 var currentHumidity = document.getElementById("current-humid");
 var currentWind = document.getElementById("current-wind");
+
 
 
 
@@ -170,7 +171,12 @@ var displayWeatherAndMusic = function() {
 
 }
 
-displayWeatherAndMusic();
+searchButton.addEventListener('click', function(event) {
+  event.preventDefault();
+  var searchInput = document.getElementById("search-input");
+  currentCity = searchInput.value;
+  console.log(currentCity);
+})
 
 
 
