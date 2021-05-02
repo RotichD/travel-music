@@ -23,7 +23,6 @@ main {
 
 #search-area {
     display: flex;
-    border: rgba(172, 172, 172, 0.555);
     text-align: center;
     margin-top: 45px;
     margin-bottom: 45px;
@@ -48,7 +47,7 @@ h2 {
     padding-bottom: 5px; 
     padding-left: 10px; 
     padding-right: 10px;  
-    border:var(--border-color);
+    
     border-style: solid;
     
 }
