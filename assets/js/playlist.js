@@ -1,11 +1,17 @@
 // Global Variables:
 var playlistNumber = 0;
 var playlistContainerEl = document.querySelector("#playlist-box");
-var currentCity = "San Francisco";
+var currentCity = "El Sobrante";
 var apiKey = "f97301447cbd41068af8623a398ba1fb";
 var forecastUrl = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&units=imperial&appid=${apiKey}`;
 var weatherArrayCode = "";
+var weatherDescription = "";
 var searchButton = document.getElementById("search-button");
+var cityName = document.getElementById("current-city");
+var currentTemp = document.getElementById("current-temp");
+var currentHumidity = document.getElementById("current-humid");
+var currentWind = document.getElementById("current-wind");
+
 
 
 // Arrays to store playlist codes by related Weather Condition
@@ -65,7 +71,7 @@ var randomPlaylist = function (weatherArray) {
 
   randomPlaylistUrl = spotifyUrlHalf + weatherArray[playlistNumber];
 
-  console.log(randomPlaylistUrl);
+  //console.log(randomPlaylistUrl);
   return randomPlaylistUrl;
 };
 
@@ -82,13 +88,90 @@ var insertPlaylist = function (weatherCondition) {
 
 // decides what array to use based on weather api
 
+var displayWeatherAndMusic = function() {
+  fetch(forecastUrl).then(function(response) {
+    response.json().then(function(data) {
+      console.log(data);
 
-fetch(forecastUrl).then(function(response) {
-  response.json().then(function(data) {
-    console.log(data);
+      cityName.innerHTML = "City: " + data.name;
+      currentTemp.innerHTML = "Temperature: " + data.main.temp;
+      currentHumidity.innerHTML = "Humidity: " + data.main.humidity + "%";
+      currentWind.innerHTML = "Wind: " + data.wind.speed + " mph";
 
+      var musicTemp = data.main.temp;
+      
+
+      
+      switch(data.weather[0].main) {
+        case 'Clear':
+          if (musicTemp > 77) {
+            insertPlaylist(hotSongs);
+          } else {
+            insertPlaylist(warmSongs);
+          }
+          break;
+        case 'Clouds':
+          if (musicTemp > 65) {
+            if (musicTemp > 77) {
+              insertPlaylist(hotSongs);
+            }
+            insertPlaylist(warmSongs);
+          } else {
+            insertPlaylist(chillSongs);
+          }
+          break;
+        case 'Mist':
+          insertPlaylist(chillSongs);
+          break;
+        case 'Fog':
+          insertPlaylist(chillSongs);
+          break;
+        case 'Smoke':
+          insertPlaylist(chaoticSongs);
+          break;
+        case 'Haze':
+          insertPlaylist(chaoticSongs);
+          break;
+        case 'Dust':
+          insertPlaylist(chaoticSongs);
+          break;
+        case 'Sand':
+          insertPlaylist(chaoticSongs);
+          break;
+        case 'Ash':
+          insertPlaylist(chaoticSongs);
+          break;
+        case 'Squall':
+          insertPlaylist(chaoticSongs);
+          break;
+        case 'Tornado':
+          insertPlaylist(chaoticSongs);
+          break;
+        case 'Snow':
+          insertPlaylist(snowSongs);
+          break;
+        case 'Rain':
+          insertPlaylist(chillSongs);
+          break;
+        case 'Drizzle':
+          insertPlaylist(chillSongs);
+          break;
+        case 'Thunderstorm':
+          insertPlaylist(chaoticSongs);
+          break;
+        default:
+          insertPlaylist(warmSongs);
+        
+
+      }
+  
+    });
   });
-});
+
+}
+
+displayWeatherAndMusic();
+
 
 
 
