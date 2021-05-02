@@ -11,6 +11,8 @@ var cityName = document.getElementById("current-city");
 var currentTemp = document.getElementById("current-temp");
 var currentHumidity = document.getElementById("current-humid");
 var currentWind = document.getElementById("current-wind");
+var descriptionIcon = document.getElementById("description-icon");
+var descriptionDetails = document.getElementById("current-description");
 
 
 
@@ -95,9 +97,11 @@ var displayWeatherAndMusic = function() {
       console.log(data);
 
       cityName.innerHTML = "City: " + data.name;
-      currentTemp.innerHTML = "Temperature: " + data.main.temp;
-      currentHumidity.innerHTML = "Humidity: " + data.main.humidity + "%";
-      currentWind.innerHTML = "Wind: " + data.wind.speed + " mph";
+      currentTemp.innerHTML = '<i class="wi wi-thermometer">' + " " + data.main.temp + " °F";
+      currentHumidity.innerHTML = '<i class="wi wi-humidity"></i>' + " " + data.main.humidity + "%";
+      currentWind.innerHTML = '<i class="wi wi-strong-wind"></i>' + " " + data.wind.speed + " mph";
+      descriptionIcon.innerHTML = `<i class="wi wi-owm-${data.weather[0].id}"></i>`;
+      descriptionDetails.innerHTML = data.weather[0].description;
 
       var musicTemp = data.main.temp;
       
