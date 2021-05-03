@@ -1,5 +1,5 @@
 /* All of this is dependent on the weather API search result */
-function myFunction() {
+function getGif() {
     fetch(
       // Make a fetch request to openWeather to get weather for location
       
@@ -34,7 +34,8 @@ function myFunction() {
           weatherImgContainerEl.innerHTML = '';
           var weatherImg = document.createElement('img');
           weatherImg.setAttribute('src', response.data[0].images.fixed_height.url);
+          weatherImg.className = "pure-img"; //Pure CSS class for responsive image sizing
           weatherImgContainerEl.appendChild(weatherImg);
         }
       });
-  }
+}
