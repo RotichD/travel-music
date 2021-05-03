@@ -1,4 +1,4 @@
-/* All of this is dependent on the weather API search result
+/* All of this is dependent on the weather API search result */
 function myFunction() {
     fetch(
       // Make a fetch request to openWeather to get weather for location
@@ -14,7 +14,7 @@ function myFunction() {
         // Display the article title above the GIF as a <h2> heading
         var responseHeaderEl = document.querySelector('#response-header');
         responseHeaderEl.innerHTML = '<h2>' + searchTerm + '</h2>';
-  */
+  
         // Return a fetch request to the Giphy search API with the article title and rating parameters
         return fetch(
           'https://api.giphy.com/v1/gifs/search?q=' +
