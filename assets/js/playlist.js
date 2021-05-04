@@ -90,14 +90,14 @@ var insertPlaylist = function (weatherCondition) {
 function getGif(searchTerm) {
   
   // Return a fetch request to the Giphy search API with the article title and rating parameters
-  fetch('https://api.giphy.com/v1/gifs/search?q=' + searchTerm + '&api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN&limit=1').then(function(response) {
+  fetch('https://api.giphy.com/v1/gifs/random?q=' + searchTerm + '&tag=' + searchTerm + '&api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN&limit=1').then(function(response) {
     response.json().then(function(gify) {
       if (gify.data.length === 0) {
         console.log('Giphy could not find anything for that.');
       } else {
         console.log(gify.data[0]);
         var weatherImgContainerEl = document.querySelector('#weather-img');
-        weatherImgContainerEl.innerHTML = '<img src="' + gify.data[0].images.fixed_height.url + '" class="pure-img" />'; // changes image based on search term
+        weatherImgContainerEl.innerHTML = '<img src="' + gify.data.image_url + '" class="pure-img" />'; // changes image based on search term
         
       }
     });
@@ -120,66 +120,84 @@ var displayWeatherAndMusic = function() {
 
       var musicTemp = data.main.temp;
       
-      getGif(data.weather[0].description);
-      
+      //getGif(data.weather[0].description);
+      console.log(data);
       switch(data.weather[0].main) {
         case 'Clear':
           if (musicTemp > 77) {
             insertPlaylist(hotSongs);
+            getGif("hot weather");
           } else {
             insertPlaylist(warmSongs);
+            getGif("sunglasses");
           }
           break;
         case 'Clouds':
           if (musicTemp > 65) {
             if (musicTemp > 77) {
               insertPlaylist(hotSongs);
+              getGif("warm weather");
             } else insertPlaylist(warmSongs);
           } else {
             insertPlaylist(chillSongs);
+            getGif("cloudy weather");
           }
           break;
         case 'Mist':
           insertPlaylist(chillSongs);
+          getGif("misty weather");
           break;
         case 'Fog':
           insertPlaylist(chillSongs);
+          getGif("foggy weather");
           break;
         case 'Smoke':
           insertPlaylist(chaoticSongs);
+          getGif("smoky sky");
           break;
         case 'Haze':
           insertPlaylist(chaoticSongs);
+          getGif("hazy sky");
           break;
         case 'Dust':
           insertPlaylist(chaoticSongs);
+          getGif("dusty");
           break;
         case 'Sand':
           insertPlaylist(chaoticSongs);
+          getGif("sand storm");
           break;
         case 'Ash':
           insertPlaylist(chaoticSongs);
+          getGif("volcanic ash");
           break;
         case 'Squall':
           insertPlaylist(chaoticSongs);
+          getGif("stormy weather");
           break;
         case 'Tornado':
           insertPlaylist(chaoticSongs);
+          getGif("tornado");
           break;
         case 'Snow':
           insertPlaylist(snowSongs);
+          getGif("snowing");
           break;
         case 'Rain':
           insertPlaylist(chillSongs);
+          getGif("raining");
           break;
         case 'Drizzle':
           insertPlaylist(chillSongs);
+          getGif("light rain");
           break;
         case 'Thunderstorm':
           insertPlaylist(chaoticSongs);
+          getGif("thunderstorm");
           break;
         default:
           insertPlaylist(warmSongs);
+          getGif("warm weather");
         
 
       }
