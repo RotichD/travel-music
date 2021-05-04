@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
   <link rel="stylesheet" href="assets/css/weather-icons.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -23,14 +24,21 @@
   <main>
     <div class="pure-g">
       <div id="search-area" class="pure-u-1">
+        <div id="wrap">
+          <form action="" autocomplete="on">
+            <label for="search" class="destination">Destination:</label>
+            <input id="search" name="search" type="text" placeholder="Select a destination"><input
+              id="search_submit" value="Rechercher" type="submit">
+          </form>
+        </div>
         <!--Form area for search bar-->
-        <form class="pure-form pure-u-1" id="city-form">
+        <!-- <form class="pure-form pure-u-1" id="city-form">
           <label for="search" class="destination">Destination:</label>
           <input type="text" name="search" id="search-input"/>
           <button class="button-success pure-button" id="search-button">Search</button>
-        </form>
+        </form> -->
       </div>
-      
+
       <div id="weather-box" class="pure-u-1">
         <h2>Weather Info Here</h2>
       </div>
@@ -50,7 +58,8 @@
       </div>
       <div id="weather-icon" class="pure-u-1 pure-u-md-1-3">
         <div class="l-box">
-          <img src="https://static01.nyt.com/images/2014/05/25/magazine/25wmt/mag-25WMT-t_CA0-superJumbo.jpg" class="pure-img" />
+          <img src="https://static01.nyt.com/images/2014/05/25/magazine/25wmt/mag-25WMT-t_CA0-superJumbo.jpg"
+            class="pure-img" />
         </div>
       </div>
     </div>
@@ -78,4 +87,5 @@
   </footer>
 </body>
 <script src="assets/js/playlist.js"></script>
+
 </html>
