@@ -1,0 +1,261 @@
+:root {
+    --main-color: #f8f9fa;
+    --text-color: #212529;
+    --content-background: #1DB954;
+    --border-color: #6c757d;
+}
+
+* {
+    color: var(--text-color);
+    font-family: "Montserrat";
+    letter-spacing: 2px;
+    line-height: 20px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat";
+}
+
+main {
+    margin-bottom: 100px;
+    background-color: var(--main-color);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+header {
+    background-color: var(--content-background);
+    margin: 0;
+    text-shadow: .5px .5px 3px rgba(0, 0, 0, 0.2);
+}
+
+header i {
+    color: var(--main-color);
+}
+
+h1 {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0px;
+    font-weight: 900;
+    font-size: 70px;
+    letter-spacing: 3px;
+    line-height: 1.2;
+    border-bottom: 3px solid ;
+    color: var(--main-color);
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 20px 20px 20px;
+    padding-top: 5px;
+    padding-bottom: 10px; 
+    padding-left: 10px; 
+    padding-right: 10px;
+    border-bottom: 3px solid var(--content-background);
+
+}
+
+p {
+    color: var(--text-color);
+    padding: auto;
+    margin: auto;
+    line-height: 1.5;
+}
+
+/*SEARCH BAR*/
+.container{
+    margin: 50px auto;
+    background-color: rgba(51, 53, 51, .25);
+    height: 30px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    transition: 0.8s;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
+} 
+
+
+.container:hover input {
+    width: 70vw;
+}
+
+.container:hover input::placeholder {
+    color: var(--main-color);
+}
+
+.container input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 220px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.8s;
+}
+
+.container a li .fas{
+    background: #333533;
+}
+/* End of search bar */
+
+
+
+
+
+/* Weather section */
+#weather-box {
+    background-color: var(--main-color);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#weather-box h2 {
+    margin-bottom: 5px;
+}
+
+#weather-box p {
+    font-style: italic;
+}
+
+
+.l-box {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    padding-right: 40px;
+    padding-left: 40px;
+
+}
+
+.l-box h4 {
+    font-size: 30px;
+}
+
+.l-box img {
+    padding-top: 50px;
+}
+
+.vibe-indicator h4 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.vibe-indicator p {
+    text-align: center;
+    font-size: 8px;
+    font-style: italic;
+}
+
+.basic-info {
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
+
+.basic-info h3 {
+    font-size: 30px;
+    line-height: 1;
+}
+
+.basic-info p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+
+.weather-info {
+    text-align: center;
+}
+
+.weather-info h4 {
+    font-size: 30px;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.weather-info p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.weather-info i {
+    font-size: 150px;
+}
+/* End of weather section */
+
+/*Spotify*/
+
+.playlist-description h2 {
+    line-height: 25px;
+}
+
+.playlist-description p {
+    text-align: center;
+    margin: 5%;
+}
+
+.weather-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.embedded-player-container iframe{
+    display: block;
+    margin:auto;
+}
+
+#playlist-box h2 {
+    margin: 5%;
+    padding-bottom: 10px;
+}
+
+#playlist-info p {
+    margin: 5%;
+    text-align: center;
+}
+
+#playlist-box p {
+    margin: 5%;
+    text-align: center;
+}
+
+
+#playlist-info button {
+    display: block;
+    margin: 15px auto;
+}
+
+/* End of Spotify */
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: var(--content-background)
+}
+
+.footer h3 {
+    text-align: center;
+    background-color:var(--content-background);
+
+}
+.footer p {
+    color: #fff;
+    text-align: center;
+    background-color: var(--content-background);
+}
+
+/* End of Footer */
