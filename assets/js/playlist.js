@@ -114,7 +114,7 @@ var displayWeatherAndMusic = function() {
       console.log(data);
       // updates the page with information from open weather api
       cityName.innerHTML = "City: " + data.name;
-      currentTemp.innerHTML = '<i class="wi wi-thermometer">' + " " + data.main.temp + " °F";
+      currentTemp.innerHTML = '<i class="wi wi-thermometer">' + " " + Math.round(data.main.temp) + " °F";
       currentHumidity.innerHTML = '<i class="wi wi-humidity"></i>' + " " + data.main.humidity + "%";
       currentWind.innerHTML = '<i class="wi wi-strong-wind"></i>' + " " + data.wind.speed + " mph";
       descriptionIcon.innerHTML = `<i class="wi wi-owm-${data.weather[0].id}"></i>`;
@@ -144,9 +144,10 @@ var displayWeatherAndMusic = function() {
               switchTheVibe(hotSongs);
             } else insertPlaylist(warmSongs);
             switchTheVibe(warmSongs);
+            getGif("cloudy");
           } else {
             insertPlaylist(chillSongs);
-            getGif("cloudy weather");
+            getGif("cloudy");
             switchTheVibe(chillSongs);
           }
           break;
