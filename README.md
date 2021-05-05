@@ -32,7 +32,7 @@ The user will interact with the search bar at the top of the page and search for
 Contributors to this project are: 
 Dylan Rotich: https://github.com/RotichD
 Abby Sexton: https://github.com/abbycav7
-Kimberly Salas: 
+Kimberly Salas: https://github.com/salask24
 Brad Smith: https://github.com/smithfamily42
 
 ## License
