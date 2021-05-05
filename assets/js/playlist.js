@@ -125,11 +125,13 @@ var displayWeatherAndMusic = function() {
       switch(data.weather[0].main) {
         case 'Clear':
           if (musicTemp > 77) {
-            insertPlaylist(hotSongs);
-            getGif("hot weather");
+            insertPlaylist(hotSongs); // displays hot weather related playlist
+            getGif("hot weather"); // displays random gif with hot weather tag
+            switchTheVibe(hotSongs); // generates instructions and button for getting a different playlist from the same hotSongs array
           } else {
             insertPlaylist(warmSongs);
             getGif("sunglasses");
+            switchTheVibe(warmSongs);
           }
           break;
         case 'Clouds':
@@ -137,67 +139,84 @@ var displayWeatherAndMusic = function() {
             if (musicTemp > 77) {
               insertPlaylist(hotSongs);
               getGif("warm weather");
+              switchTheVibe(hotSongs);
             } else insertPlaylist(warmSongs);
+            switchTheVibe(warmSongs);
           } else {
             insertPlaylist(chillSongs);
             getGif("cloudy weather");
+            switchTheVibe(chillSongs);
           }
           break;
         case 'Mist':
           insertPlaylist(chillSongs);
           getGif("misty weather");
+          switchTheVibe(chillSongs);
           break;
         case 'Fog':
           insertPlaylist(chillSongs);
           getGif("foggy weather");
+          switchTheVibe(chillSongs);
           break;
         case 'Smoke':
           insertPlaylist(chaoticSongs);
           getGif("smoky sky");
+          switchTheVibe(chaoticSongs);
           break;
         case 'Haze':
           insertPlaylist(chaoticSongs);
           getGif("hazy sky");
+          switchTheVibe(chaoticSongs);
           break;
         case 'Dust':
           insertPlaylist(chaoticSongs);
           getGif("dusty");
+          switchTheVibe(chaoticSongs);
           break;
         case 'Sand':
           insertPlaylist(chaoticSongs);
           getGif("sand storm");
+          switchTheVibe(chaoticSongs);
           break;
         case 'Ash':
           insertPlaylist(chaoticSongs);
           getGif("volcanic ash");
+          switchTheVibe(chaoticSongs);
           break;
         case 'Squall':
           insertPlaylist(chaoticSongs);
           getGif("stormy weather");
+          switchTheVibe(chaoticSongs);
           break;
         case 'Tornado':
           insertPlaylist(chaoticSongs);
           getGif("tornado");
+          switchTheVibe(chaoticSongs);
           break;
         case 'Snow':
           insertPlaylist(snowSongs);
           getGif("snowing");
+          switchTheVibe(snowSongs);
           break;
         case 'Rain':
           insertPlaylist(chillSongs);
           getGif("raining");
+          switchTheVibe(chillSongs);
           break;
         case 'Drizzle':
           insertPlaylist(chillSongs);
           getGif("light rain");
+          switchTheVibe(chillSongs);
           break;
         case 'Thunderstorm':
           insertPlaylist(chaoticSongs);
           getGif("thunderstorm");
+          switchTheVibe(chaoticSongs);
           break;
         default:
           insertPlaylist(warmSongs);
           getGif("warm weather");
+          switchTheVibe(warmSongs);
         
 
       }
@@ -214,8 +233,8 @@ const switchTheVibe = function(whichVibe) {
   var playlistInfoContainer = document.getElementById("playlist-info");
   var refreshInstructions = document.createElement('p');
   refreshInstructions.innerHTML = "Don't like the playlist? Click the button below to get a new recommendation.";
-  playlistContainerEl.appendChild(refreshInstructions);
-  playlistContainerEl.appendChild(refreshButton);
+  playlistInfoContainer.appendChild(refreshInstructions);
+  playlistInfoContainer.appendChild(refreshButton);
 
   refreshButton.addEventListener('click', function(event) {
     event.preventDefault();

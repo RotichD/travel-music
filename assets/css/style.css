@@ -42,6 +42,24 @@ h1 {
     border-bottom: 3px solid ;
 }
 
+h2 {
+    text-align: center;
+    margin: 20px 20px 20px 20px;
+    padding-top: 5px;
+    padding-bottom: 10px; 
+    padding-left: 10px; 
+    padding-right: 10px;
+    border-bottom: 3px solid #8A9670;
+
+}
+
+p {
+    color: #c3d2d5b0;
+    padding: auto;
+    margin: auto;
+    line-height: 1.5;
+}
+
 /*SEARCH BAR*/
 .container{
     margin: 50px auto;
@@ -78,22 +96,7 @@ h1 {
 
 
 
-h2 {
-    text-align: center;
-    margin: 20px 20px 20px 20px;
-    padding-top: 5px;
-    padding-bottom: 10px; 
-    padding-left: 10px; 
-    padding-right: 10px;
-    border-bottom: 3px solid #8A9670;
 
-}
-
-p {
-    color: #c3d2d5b0;
-    padding: auto;
-    margin: auto;
-}
 
 /* Weather section */
 #weather-box {
@@ -161,7 +164,7 @@ p {
 }
 
 .playlist-description p {
-    text-align: justify;
+    text-align: center;
     margin: 5%;
 }
 
@@ -180,13 +183,13 @@ p {
     padding-bottom: 10px;
 }
 
-#playlist-box p {
+#playlist-info p {
     margin: 5%;
-    text-align: justify;
+    text-align: center;
 }
 
 
-#playlist-box button {
+#playlist-info button {
     display: block;
     margin: 15px auto;
 }
