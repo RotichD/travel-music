@@ -144,10 +144,10 @@ var displayWeatherAndMusic = function() {
               switchTheVibe(hotSongs);
             } else insertPlaylist(warmSongs);
             switchTheVibe(warmSongs);
-            getGif("cloudy weather");
+            getGif("cloudy");
           } else {
             insertPlaylist(chillSongs);
-            getGif("cloudy weather");
+            getGif("cloudy");
             switchTheVibe(chillSongs);
           }
           break;
