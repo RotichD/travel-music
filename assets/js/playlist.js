@@ -210,6 +210,7 @@ var displayWeatherAndMusic = function() {
 const switchTheVibe = function(whichVibe) {
   var refreshButton = document.createElement('button');
   refreshButton.className = "pure-button";
+  refreshButton.innerHTML = "Get New Playlist Recommendation";
   var playlistInfoContainer = document.getElementById("playlist-info");
   playlistInfoContainer.appendChild(refreshButton);
 
