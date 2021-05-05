@@ -116,8 +116,24 @@ p {
 
 }
 
+.l-box h4 {
+    font-size: 30px;
+}
+
 .l-box img {
     padding-top: 50px;
+}
+
+.vibe-indicator h4 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.vibe-indicator p {
+    text-align: center;
+    font-size: 8px;
+    font-style: italic;
 }
 
 .basic-info {
