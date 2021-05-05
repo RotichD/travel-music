@@ -247,9 +247,6 @@ const switchTheVibe = function(whichVibe) {
   })
 };
 
-/*const saveLastLocation = function() {
-  localStorage.setItem("last location", lastLocation);
-};*/
 
 const loadLastLocation = function() {
   // update current city to value stored in local storage
