@@ -207,6 +207,18 @@ var displayWeatherAndMusic = function() {
 
 }
 
+const switchTheVibe = function(whichVibe) {
+  var refreshButton = document.createElement('button');
+  refreshButton.className = "pure-button";
+  var playlistInfoContainer = document.getElementById("playlist-info");
+  playlistInfoContainer.appendChild(refreshButton);
+
+  refreshButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    insertPlaylist(whichVibe);
+  })
+};
+
 searchButton.addEventListener('click', function(event) {
   event.preventDefault();
   var searchInput = document.getElementById("search-input");
