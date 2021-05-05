@@ -5,89 +5,14 @@
     --border-color: #333533;
 }
 
-
-/*TESTING SEARCH BAR*/
+* {
+    color: var(--text-color);
+    font-family: "Montserrat";
+    letter-spacing: 2px;
+    line-height: 20px;
+}
 
 body {
-	background: #DDD;
-	font-size: 15px;
-}
-#wrap {
-  margin: 50px auto;
-  padding-bottom: 50px;
-  display: inline-block;
-  position: relative;
-  height: 60px;
-  /* float: right; */
-  padding: 0;
-  position: relative;
-}
-
-input[type="text"] {
-  height: 60px;
-  font-size: 25px;
-  display: inline-block;
-  font-family: "Montserrat";
-  font-weight: 50;
-  border: none;
-  outline: none;
-  color: #555;
-  padding: 3px;
-  padding-right: 60px;
-  width: 0px;
-  position:static;
-  top: 100px;
-  right: 50px;
-  background: none;
-  z-index: 3;
-  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
-  cursor: pointer;
-}
-
-input[type="text"]:focus:hover {
-  border-bottom: 1px solid #BBB;
-}
-
-input[type="text"]:focus {
-  width: 700px;
-  z-index: 1;
-  border-bottom: 1px solid #BBB;
-  cursor: text;
-}
-
-input[type="submit"] {
-  height: 67px;
-  width: 63px;
-  display: inline-block;
-  color:red;
-  /* float: right; */
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRFU1NT9fX1lJSUXl5e1dXVfn5+c3Nz6urqv7+/tLS0iYmJqampn5+fysrK39/faWlp////Vi4ZywAAABF0Uk5T/////////////////////wAlrZliAAABLklEQVR42rSWWRbDIAhFHeOUtN3/ags1zaA4cHrKZ8JFRHwoXkwTvwGP1Qo0bYObAPwiLmbNAHBWFBZlD9j0JxflDViIObNHG/Do8PRHTJk0TezAhv7qloK0JJEBh+F8+U/hopIELOWfiZUCDOZD1RADOQKA75oq4cvVkcT+OdHnqqpQCITWAjnWVgGQUWz12lJuGwGoaWgBKzRVBcCypgUkOAoWgBX/L0CmxN40u6xwcIJ1cOzWYDffp3axsQOyvdkXiH9FKRFwPRHYZUaXMgPLeiW7QhbDRciyLXJaKheCuLbiVoqx1DVRyH26yb0hsuoOFEPsoz+BVE0MRlZNjGZcRQyHYkmMp2hBTIzdkzCTc/pLqOnBrk7/yZdAOq/q5NPBH1f7x7fGP4C3AAMAQrhzX9zhcGsAAAAASUVORK5CYII=) center center no-repeat;
-  text-indent: -10000px;
-  border: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  cursor: pointer;
-  opacity: 0.4;
-  cursor: pointer;
-  transition: opacity .4s ease;
-}
-
-input[type="submit"]:hover {
-  opacity: 0.8;
-}
-
-
-
-
-
-
-
-/*LEAVE WHAT'S BELOW*/
-
-body {
-    /* height: 100%; */
     padding: 0;
     margin: 0;
     font-family: "Montserrat";
@@ -95,33 +20,53 @@ body {
 
 main {
     margin-bottom: 100px;
-}
-
-* {
     background-color: var(--main-color);
-    color: var(--text-color);
-    font-family: "Montserrat";
 }
 
-/* #search-area {
+header {
+    background-color: var(--main-color);
+
+}
+
+/*SEARCH BAR*/
+.container{
+    margin: 50px auto;
+    background-color: #333533;
+    height: 30px;
+    border-radius: 30px;
+    padding: 10px 20px;
     display: flex;
-    text-align: center;
-    margin-top: 45px;
-    margin-bottom: 45px;
-    margin-left: 25px;
-} */
+    align-items: center;
+    transition: 0.8s;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+} 
 
-.destination{
-    font-size: 25px;
-    margin-left: 70px;
-    text-align: center;
+
+.container:hover input {
+    width: 350px;
+    cursor: pointer;
 }
+
+.container input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.8s;
+}
+
+.container a li .fas{
+   background: #333533;
+
+}
+/* End of search bar */
 
 h1 {
     text-align: center;
-    border-bottom: var(--border-color);
-    border-style: groove;
     padding: 20px 0 20px 0;
+    border-bottom: 3px solid red;
 }
 
 h2 {
@@ -131,42 +76,12 @@ h2 {
     padding-bottom: 5px; 
     padding-left: 10px; 
     padding-right: 10px;  
-    
-    border-style: solid;
-    
+
 }
 
-label {
-    font-weight: bold;
-    font-size: 15px;
-    margin-top: 10px;
+p {
+    color: #c3d2d5b0;
 }
-
-
-#search-input {
-    background-color: rgba(238, 238, 238, 0.24);
-    color: var(--main-color);
-    border-radius: 10px;
-    margin-right: 5px;
-    margin-left: 5px;
-    
-}
-
-button {
-    background-color: rgb(141, 60, 60);
-    border-radius: 4rem;
-}
-
-button:hover {
-    background-color: white;
-    color: black;
-}
-
-
-#content-area div {
-    flex-basis: 100%;
-}
-
 
 #weather-box {
     background-color: var(--main-color);
@@ -174,19 +89,18 @@ button:hover {
     margin-bottom: 20px;
 }
 
-.l-box{
-    padding-right: 10px;
-}
-
-
-#playlist-box {
-    background-color: rgba(169, 169, 169, 0.377);
-}
 
 .l-box {
     text-align: center;
     padding-top: 5%;
     padding-bottom: 10%;
+    padding-right: 40px;
+    padding-left: 40px;
+
+}
+
+.l-box img {
+    padding-top: 50px;
 }
 
 .basic-info {
@@ -204,6 +118,7 @@ button:hover {
     margin-bottom: 5px;
     margin-top: 5px;
 }
+
 
 .weather-info {
     text-align: center;
@@ -223,6 +138,8 @@ button:hover {
     font-size: 150px;
 }
 
+
+/*Spotify*/
 .embedded-player-container iframe{
     display: block;
     margin:auto;

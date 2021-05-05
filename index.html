@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Travel Music</title>
+  <title>Travel Tunes</title>
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
     integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="assets/css/weather-icons.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://kit.fontawesome.com/83d824fd2f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -23,24 +24,16 @@
 
   <main>
     <div class="pure-g">
-      <div id="search-area" class="pure-u-1">
-        <div id="wrap">
-          <form action="" autocomplete="on">
-            <label for="search" class="destination">Destination:</label>
-            <input id="search" name="search" type="text" placeholder="Select a destination"><input
-              id="search_submit" value="Rechercher" type="submit">
-          </form>
+        <!-- Search Bar -->
+        <div class="container">
+          <input type="text" placeholder="Select a destination">
+          <a href="">
+            <li class="fas fa-search-location"></li>
+          </a>
         </div>
-        <!--Form area for search bar-->
-        <!-- <form class="pure-form pure-u-1" id="city-form">
-          <label for="search" class="destination">Destination:</label>
-          <input type="text" name="search" id="search-input"/>
-          <button class="button-success pure-button" id="search-button">Search</button>
-        </form> -->
-      </div>
-
+<!-- End of Search Bar -->
       <div id="weather-box" class="pure-u-1">
-        <h2>Weather Info Here</h2>
+        <h2>Weather Info</h2>
       </div>
 
       <div class="pure-u-1 pure-u-md-1-3">
@@ -52,7 +45,7 @@
         </div>
       </div>
       <div class="pure-u-1 pure-u-md-1-3 weather-info ">
-        <h4 id="current-main">Current Condition</h4>
+        <h4 id="current-main">Current Condition:</h4>
         <p id="current-description">Details</p>
         <span id="description-icon"></span>
       </div>
@@ -69,7 +62,8 @@
       <div class="pure-u-1 pure-u-md-1-2 playlist-description">
         <h2>Select A Playlist</h2>
         <p>After selecting a destination, you will be presented a random playlist based on the current weather condition
-          of your selected destination. The playlist's relation to the weather condition will either be based literally
+          of your selected destination.</br>
+          The playlist's relation to the weather condition will either be based literally
           on the playlist's name or it's energy/vibe. </p>
       </div>
       <div id="playlist-box" class="pure-u-1 pure-u-md-1-2 embedded-player-container">
