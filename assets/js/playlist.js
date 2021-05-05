@@ -233,14 +233,10 @@ var displayWeatherAndMusic = function() {
 }
 
 const switchTheVibe = function(whichVibe) {
-  var refreshButton = document.createElement('button');
-  refreshButton.className = "pure-button";
-  refreshButton.innerHTML = "Get New Playlist Recommendation";
-  var playlistInfoContainer = document.getElementById("playlist-info");
-  var refreshInstructions = document.createElement('p');
-  refreshInstructions.innerHTML = "Don't like the playlist? Click the button below to get a new recommendation.";
-  playlistInfoContainer.appendChild(refreshInstructions);
-  playlistInfoContainer.appendChild(refreshButton);
+  var refreshButton = document.getElementById("refresh-btn");
+  refreshButton.hidden = false;
+  var refreshInstructions = document.getElementById("refresh-instructions");
+  refreshInstructions.hidden = false;
 
   refreshButton.addEventListener('click', function(event) {
     event.preventDefault();
@@ -261,7 +257,7 @@ const loadLastLocation = function() {
 loadLastLocation();
 
 
-searchButton.addEventListener('click', function(event) {
+/* searchButton.addEventListener('click', function(event) {
   event.preventDefault();
   var searchInput = document.getElementById("search-input");
   currentCity = searchInput.value;
@@ -273,6 +269,8 @@ searchButton.addEventListener('click', function(event) {
   localStorage.setItem("last location", lastLocation);
 
 });
+
+*/
 
 searchField.addEventListener('submit', function(event) {
   event.preventDefault();
