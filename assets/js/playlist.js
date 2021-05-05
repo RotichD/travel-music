@@ -14,6 +14,7 @@ var currentWind = document.getElementById("current-wind");
 var descriptionIcon = document.getElementById("description-icon");
 var descriptionDetails = document.getElementById("current-description");
 var lastLocation = "";
+var instructions = document.getElementById("instructions");
 
 
 
@@ -60,6 +61,8 @@ var snowSongs =[
     "37i9dQZF1DWXcDWWDXKjLV",
 ];
 
+instructions.hidden = false;
+
 // determines which random playlist to insert depending on the length of the arrary (how many playlists available)
 // Is called by randomPlaylist function
 var getRandomInt = function (size) {
@@ -86,6 +89,7 @@ var insertPlaylist = function (weatherCondition) {
 
   spotifyPlayer.hidden = false;
   spotifyPlayer.src = url_string;
+  instructions.hidden = true;
 };
 
 function getGif(searchTerm) {
@@ -257,6 +261,7 @@ const loadLastLocation = function() {
 };
 
 loadLastLocation();
+
 
 searchButton.addEventListener('click', function(event) {
   event.preventDefault();
