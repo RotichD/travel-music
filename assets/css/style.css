@@ -1,8 +1,8 @@
 :root {
-    --main-color: #191414;
+    --main-color: #000303;
     --text-color: #C3D2D5;
-    --content-background: #cfcecd;
-    --border-color: #333533;
+    --content-background: #484A37;
+    --border-color: #8A9670;
 }
 
 * {
@@ -21,11 +21,25 @@ body {
 main {
     margin-bottom: 100px;
     background-color: var(--main-color);
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 header {
-    background-color: var(--main-color);
+    background-color: var(--content-background);
+    margin: 0;
 
+}
+
+h1 {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    line-height: 50px;
+    border-bottom: 3px solid ;
 }
 
 /*SEARCH BAR*/
@@ -38,7 +52,7 @@ header {
     display: flex;
     align-items: center;
     transition: 0.8s;
-    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.534);
 } 
 
 
@@ -58,31 +72,30 @@ header {
 }
 
 .container a li .fas{
-   background: #333533;
-
+    background: #333533;
 }
 /* End of search bar */
 
-h1 {
-    text-align: center;
-    padding: 20px 0 20px 0;
-    border-bottom: 3px solid red;
-}
+
 
 h2 {
     text-align: center;
-    margin: auto;
+    margin: 20px 20px 20px 20px;
     padding-top: 5px;
-    padding-bottom: 5px; 
+    padding-bottom: 10px; 
     padding-left: 10px; 
-    padding-right: 10px;  
+    padding-right: 10px;
+    border-bottom: 3px solid #8A9670;
 
 }
 
 p {
     color: #c3d2d5b0;
+    padding: auto;
+    margin: auto;
 }
 
+/* Weather section */
 #weather-box {
     background-color: var(--main-color);
     padding-bottom: 10px;
@@ -128,6 +141,7 @@ p {
 .weather-info h4 {
     font-size: 30px;
     margin-bottom: 5px;
+    line-height: 30px;
 }
 
 .weather-info p {
@@ -138,12 +152,12 @@ p {
 .weather-info i {
     font-size: 150px;
 }
-
+/* End of weather section */
 
 /*Spotify*/
-.embedded-player-container iframe{
-    display: block;
-    margin:auto;
+
+.playlist-description h2 {
+    line-height: 25px;
 }
 
 .playlist-description p {
@@ -151,22 +165,37 @@ p {
     margin: 5%;
 }
 
+.embedded-player-container iframe{
+    display: block;
+    margin:auto;
+}
+
+#playlist-box h2 {
+    margin: 5%;
+    padding-bottom: 10px;
+}
+
+/* End of Spotify */
+
+/* Footer */
 .footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100px;
-    background-color: rgb(112, 112, 112);
+    background-color: var(--content-background)
 }
 
 .footer h3 {
     text-align: center;
-    background-color: rgb(112, 112, 112);
+    background-color:var(--content-background);
 
 }
 .footer p {
     color: #fff;
     text-align: center;
-    background-color: rgb(112, 112, 112);
+    background-color: var(--content-background);
 }
+
+/* End of Footer */
