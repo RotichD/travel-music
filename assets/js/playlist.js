@@ -212,7 +212,10 @@ const switchTheVibe = function(whichVibe) {
   refreshButton.className = "pure-button";
   refreshButton.innerHTML = "Get New Playlist Recommendation";
   var playlistInfoContainer = document.getElementById("playlist-info");
-  playlistInfoContainer.appendChild(refreshButton);
+  var refreshInstructions = document.createElement('p');
+  refreshInstructions.innerHTML = "Don't like the playlist? Click the button below to get a new recommendation.";
+  playlistContainerEl.appendChild(refreshInstructions);
+  playlistContainerEl.appendChild(refreshButton);
 
   refreshButton.addEventListener('click', function(event) {
     event.preventDefault();

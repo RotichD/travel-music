@@ -180,6 +180,17 @@ p {
     padding-bottom: 10px;
 }
 
+#playlist-box p {
+    margin: 5%;
+    text-align: justify;
+}
+
+
+#playlist-box button {
+    display: block;
+    margin: 15px auto;
+}
+
 /* End of Spotify */
 
 /* Footer */
