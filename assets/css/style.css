@@ -37,8 +37,9 @@ h1 {
     padding-bottom: 50px;
     margin: 0px;
     font-weight: 900;
+    font-size: 70px;
     letter-spacing: 3px;
-    line-height: 50px;
+    line-height: 1.2;
     border-bottom: 3px solid ;
 }
 
@@ -108,7 +109,7 @@ p {
 }
 
 #weather-box h2 {
-    margin-bottom: 0px;
+    margin-bottom: 5px;
 }
 
 #weather-box p {
@@ -137,6 +138,7 @@ p {
     text-align: center;
     font-size: 30px;
     margin-bottom: 10px;
+    line-height: 1;
 }
 
 .vibe-indicator p {
@@ -155,6 +157,7 @@ p {
 
 .basic-info h3 {
     font-size: 30px;
+    line-height: 1;
 }
 
 .basic-info p {
@@ -170,7 +173,7 @@ p {
 .weather-info h4 {
     font-size: 30px;
     margin-bottom: 5px;
-    line-height: 30px;
+    line-height: 1;
 }
 
 .weather-info p {

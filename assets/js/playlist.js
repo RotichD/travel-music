@@ -15,6 +15,7 @@ var descriptionIcon = document.getElementById("description-icon");
 var descriptionDetails = document.getElementById("current-description");
 var lastLocation = "";
 var instructions = document.getElementById("instructions");
+var searchField = document.getElementById("search-field");
 
 
 
@@ -272,6 +273,18 @@ searchButton.addEventListener('click', function(event) {
   localStorage.setItem("last location", lastLocation);
 
 });
+
+searchField.addEventListener('submit', function(event) {
+  event.preventDefault();
+  var searchInput = document.getElementById("search-input");
+  currentCity = searchInput.value;
+  console.log(currentCity);
+  forecastUrl = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&units=imperial&appid=${apiKey}`;
+ 
+  displayWeatherAndMusic();
+  lastLocation = currentCity;
+  localStorage.setItem("last location", lastLocation);
+})
 
 
 
