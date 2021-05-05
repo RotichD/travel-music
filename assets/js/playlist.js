@@ -144,6 +144,7 @@ var displayWeatherAndMusic = function() {
               switchTheVibe(hotSongs);
             } else insertPlaylist(warmSongs);
             switchTheVibe(warmSongs);
+            getGif("cloudy weather");
           } else {
             insertPlaylist(chillSongs);
             getGif("cloudy weather");
