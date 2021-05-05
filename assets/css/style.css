@@ -104,6 +104,15 @@ p {
     background-color: var(--main-color);
     padding-bottom: 20px;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+#weather-box h2 {
+    margin-bottom: 0px;
+}
+
+#weather-box p {
+    font-style: italic;
 }
 
 
