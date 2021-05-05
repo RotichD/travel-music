@@ -1,8 +1,8 @@
 :root {
-    --main-color: #000303;
-    --text-color: #C3D2D5;
-    --content-background: #484A37;
-    --border-color: #8A9670;
+    --main-color: #f8f9fa;
+    --text-color: #212529;
+    --content-background: #1DB954;
+    --border-color: #6c757d;
 }
 
 * {
@@ -28,7 +28,11 @@ main {
 header {
     background-color: var(--content-background);
     margin: 0;
+    text-shadow: .5px .5px 3px rgba(0, 0, 0, 0.2);
+}
 
+header i {
+    color: var(--main-color);
 }
 
 h1 {
@@ -41,6 +45,7 @@ h1 {
     letter-spacing: 3px;
     line-height: 1.2;
     border-bottom: 3px solid ;
+    color: var(--main-color);
 }
 
 h2 {
@@ -50,12 +55,12 @@ h2 {
     padding-bottom: 10px; 
     padding-left: 10px; 
     padding-right: 10px;
-    border-bottom: 3px solid #8A9670;
+    border-bottom: 3px solid var(--content-background);
 
 }
 
 p {
-    color: #c3d2d5b0;
+    color: var(--text-color);
     padding: auto;
     margin: auto;
     line-height: 1.5;
@@ -64,14 +69,14 @@ p {
 /*SEARCH BAR*/
 .container{
     margin: 50px auto;
-    background-color: #333533;
+    background-color: rgba(51, 53, 51, .25);
     height: 30px;
     border-radius: 30px;
     padding: 10px 20px;
     display: flex;
     align-items: center;
     transition: 0.8s;
-    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.534);
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
 } 
 
 
@@ -79,7 +84,9 @@ p {
     width: 70vw;
 }
 
-
+.container:hover input::placeholder {
+    color: var(--main-color);
+}
 
 .container input {
     background: transparent;
