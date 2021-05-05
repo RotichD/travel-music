@@ -13,6 +13,7 @@ var currentHumidity = document.getElementById("current-humid");
 var currentWind = document.getElementById("current-wind");
 var descriptionIcon = document.getElementById("description-icon");
 var descriptionDetails = document.getElementById("current-description");
+var lastLocation = "";
 
 
 
@@ -242,6 +243,21 @@ const switchTheVibe = function(whichVibe) {
   })
 };
 
+/*const saveLastLocation = function() {
+  localStorage.setItem("last location", lastLocation);
+};*/
+
+const loadLastLocation = function() {
+  // update current city to value stored in local storage
+  currentCity = localStorage.getItem("last location");
+  // update forecastUrl to reflect new city value
+  forecastUrl = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&units=imperial&appid=${apiKey}`;
+  // run displayWeatherAndMusic
+  displayWeatherAndMusic();
+};
+
+loadLastLocation();
+
 searchButton.addEventListener('click', function(event) {
   event.preventDefault();
   var searchInput = document.getElementById("search-input");
@@ -250,9 +266,10 @@ searchButton.addEventListener('click', function(event) {
   forecastUrl = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&units=imperial&appid=${apiKey}`;
  
   displayWeatherAndMusic();
+  lastLocation = currentCity;
+  localStorage.setItem("last location", lastLocation);
 
-
-})
+});
 
 
 

@@ -75,9 +75,10 @@ p {
 
 
 .container:hover input {
-    width: 350px;
-    cursor: pointer;
+    width: 70vw;
 }
+
+
 
 .container input {
     background: transparent;
