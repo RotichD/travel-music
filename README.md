@@ -12,11 +12,16 @@ As a user/traveler I would like an app that would tell me the weather forecast o
 
 # Frameworks:
 
-This app runs in the browser and features dynamically updated HTML5 and CSS powered by pureCSS and uses weatherAPI, giphy, and Spotify.
+This app runs in the browser and features dynamically updated HTML5, CSS powered by pureCSS, and JavaScript.
 
 - HTML5
 - CSS: pureCSS
 - JavaScript
+
+# 2 server-side APIs
+
+- weatherAPI
+- spotify
 
 # Links: 
 
