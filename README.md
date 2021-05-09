@@ -1,4 +1,4 @@
-# travel-music
+# Travel Tunes
 
 # Description:
 We have made an app which will generate a playlist based on the weather & location of the destination which you are traveling. 
