@@ -21,7 +21,7 @@ This app runs in the browser and features dynamically updated HTML5, CSS powered
 # 2 server-side APIs
 
 - weatherAPI
-- spotify
+- gify
 
 # Links: 
 
