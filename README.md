@@ -14,10 +14,9 @@ As a user/traveler I would like an app that would tell me the weather forecast o
 
 This app runs in the browser and features dynamically updated HTML and CSS powered by pureCSS and uses weatherAPI, giphy, and Spotify.
 
-- HTML
-- CSS
+- HTML5
+- CSS: pureCSS
 - JavaScript
-- weatherAPI
 
 # Links: 
 
@@ -25,4 +24,4 @@ Github Repo: https://github.com/RotichD/travel-music
 Travel Tunes: https://rotichd.github.io/travel-music/
 
 
-![Screenshot]()
+![Screenshot](assets/images/Travel-Tunes.png)
