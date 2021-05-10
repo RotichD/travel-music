@@ -10,18 +10,19 @@ We have all been traveling at some point and realized we did not have a playlist
 As a user/traveler I would like an app that would tell me the weather forecast of my destination and provide me with weather/mood related music to listen to on my journey, as well as a visual representation of the weather.
 
 
-# Frameworks:
+# Technologies:
 
 This app runs in the browser and features dynamically updated HTML5, CSS powered by pureCSS, and JavaScript.
 
 - HTML5
-- CSS: pureCSS
+- CSS: pureCSS framework + custom css styling
 - JavaScript
+- Weather Icons font by Erik Flowers https://erikflowers.github.io/weather-icons/
 
 # 2 server-side APIs
 
-- weatherAPI
-- gify
+- OpenWeather API
+- Giphy API
 
 # Links: 
 
